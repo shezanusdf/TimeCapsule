@@ -1,6 +1,6 @@
 ## What is TimeCapsule?
 
-TimeCapsule is a web app that lets you send emails to your future self—up to 5 years ahead.
+TimeCapsule is a web app that lets you send emails to your future self.. up to 5 years ahead.
 ##  Features
 
 -  **Schedule up to 5 years** - Set any future date for delivery
