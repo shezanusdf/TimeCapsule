@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email your future.</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -19,7 +18,7 @@
     <h1>Email your future.</h1>
 
     <ul class="star-list">
-        <li>Progress is saved locally in your browser so.. don’t worry about losing what you've written.</li>
+        <li>Progress is saved locally in your browser so.. don't worry about losing what you've written.</li>
         <li>Grab a coffee while you're at it.</li>
         <li>Get comfortable.. and write your heart out &lt;3.</li>
     </ul>
@@ -45,14 +44,14 @@
             </div>
 
             <div id="letter-form">
-                <label>Your Name:</label>
-                <input type="text" placeholder="Your Name">
+                <label for="name-input">Your Name:</label>
+                <input type="text" id="name-input" placeholder="Your Name">
 
-                <label>Email:</label>
-                <input type="email" placeholder="your@email.com">
+                <label for="email-input">Email:</label>
+                <input type="email" id="email-input" placeholder="your@email.com">
 
-                <label>Send Date (DD-MM-YYYY):</label>
-                <input type="text" placeholder="31-12-2027">
+                <label for="date-input">Send Date (DD-MM-YYYY):</label>
+                <input type="text" id="date-input" placeholder="31-12-2027">
 
                 <button id="schedule-button">Send Email</button>
             </div>
@@ -60,5 +59,7 @@
 
     </div>
 </div>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>
