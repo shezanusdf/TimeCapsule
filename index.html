@@ -10,8 +10,7 @@
     <body>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="https://shezan.neocities.org/">About Me</a>
+            <a href="index.html"><!-- nav template --></a>
         </nav>
 
         <!-- Content -->
@@ -29,13 +28,34 @@
 
         <!-- Letter -->
         <div id="letter-container">
-            <div id="letter" contenteditable="true">
-            Dear future me,
+            <div id="letter-window">
+                <div id="title-bar">
+                    <span>Time Capsule - Write an Email to Your Future Self.</span>
+                    <div class="window-buttons">
+                        <div class="btn minimize"></div>
+                        <div class="btn maximize"></div>
+                        <div class="btn close"></div>
+                    </div>
+                </div>
+
+                <div id="letter" contenteditable="true">Dear Me,
+                </div>
+
+                <div id="letter-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Your Name">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+
+                    <label for="send-date">Send Date (DD-MM-YYYY):</label>
+                    <input type="text" id="send-date" placeholder="31-12-2027">
+
+                    <button id="schedule-button">Send Email</button>
+                </div>
             </div>
         </div>
 
-        <!-- Action -->
-        <button id="send-button">send</button>
         
     </body>
 </html> 

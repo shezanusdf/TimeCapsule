@@ -65,6 +65,117 @@ p, .star-list {
 }
 
 
+/* Letter container */
+#letter-container {
+    display: flex;
+    justify-content: flex-start; /* aligns left */
+    margin-top: 40px;
+    margin-left: 70px; /* same as your content margin */
+}
+
+
+/* Retro window */
+#letter-window {
+    width: 600px;
+    max-width: 90%;
+    border: 2px solid #888;
+    box-shadow: 4px 4px 0px #555; /* old-school shadow */
+    background: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Title bar */
+#title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000080;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px #00000066;
+}
+
+/* Window buttons (close, minimize, maximize) */
+.window-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.window-buttons .btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.window-buttons .close { background: #ff5f56; }
+.window-buttons .minimize { background: #ffbd2e; }
+.window-buttons .maximize { background: #27c93f; }
+
+/* Editable letter area */
+#letter {
+    min-height: 250px;
+    padding: 15px;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+    outline: none; /* remove focus border */
+    white-space: pre-wrap; /* preserve line breaks */
+}
+
+/* Optional: retro font look */
+#letter::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+#letter-form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+#letter-form label {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#letter-form input {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    border: 2px solid #fff;
+    border-bottom-color: #808080;
+    border-right-color: #808080;
+    background: #c0c0c0;
+    box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #808080;
+}
+
+#letter-form input:focus {
+    outline: none;
+}
+
+#schedule-button {
+    margin-top: 8px;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-bottom-color: #808080;
+    border-right-color: #808080;
+    padding: 5px 15px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset -1px -1px 0 #fff, inset 1px 1px 0 #808080;
+}
+
+#schedule-button:active {
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #808080;
+}
 
 
 /* Default styles (for desktop) */
