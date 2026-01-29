@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+    
+}
+
+.content {
+    max-width : 700px;
+    margin-left : 70px;
+    padding : 40px 20px;
+    text-align : left;
+    line-height : 1.6;
+    box-sizing : border-box;
+
+}
+
+/* HEADING */
+h1 {
+    font-size : 4rem;
+    letter-spacing : -1.5px;
+    color: #1C1C1E;
+    margin-bottom: 20px;
+}
+
+
+/* Default styles (for desktop) */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .content {
+        margin-right: 200px;  /* give more breathing room */
+        margin-left: 40px;
+        padding: 30px 20px;
+    }
+    h1 { font-size: 3rem; }
+    p { font-size: 1.1rem; }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+     .vertical-navbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px;
+        padding: 10px 25px;
+        background: transparent; /* no background */
+        border-bottom: none;     /* remove border */
+        z-index: 1000;           /* stay above content */
+    }
+
+     .content {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;   /* space for navbar height */
+        max-width: 90%;      /* shrink to fit small screens */
+    }
+
+    h1 { font-size: 2rem; }
+    p { font-size: 1rem; }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+     .vertical-navbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        flex-direction: row;         /* horizontal */
+        justify-content: left;     /* center links */
+        text-align: center;
+        font-size:1.2rem
+        padding: 15px 10px;
+        gap: 20px;      
+    }
+    .content {
+        margin-right: 0;     /* full width text */
+        margin-left: 15px;
+        padding-top:20px;
+        padding: 15px 10px;
+    }
+    h1 { font-size: 1.8rem; }
+    p { font-size: 0.95rem; }
+}
