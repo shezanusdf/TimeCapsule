@@ -24,7 +24,7 @@ nav {
     display : flex;
     left : 1.3;
     gap : 10px;
-    color : #0000EE;
+    color : #000080;
 }
 
 /* HEADING */
@@ -68,9 +68,14 @@ p, .star-list {
 /* Letter container */
 #letter-container {
     display: flex;
-    justify-content: flex-start; /* aligns left */
+    justify-content: flex-start;
     margin-top: 40px;
-    margin-left: 70px; /* same as your content margin */
+    margin-left: 70px; /* aligns with .content */
+    padding-right: 20px; /* optional, keeps breathing room */
+}
+
+#letter-window.minimized #window-body {
+    display: none;
 }
 
 
@@ -79,7 +84,7 @@ p, .star-list {
     width: 600px;
     max-width: 90%;
     border: 2px solid #888;
-    box-shadow: 4px 4px 0px #555; /* old-school shadow */
+    box-shadow: 5px 5px 0 #555; /* old-school shadow */
     background: #f0f0f0;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -98,21 +103,64 @@ p, .star-list {
 }
 
 /* Window buttons (close, minimize, maximize) */
-.window-buttons {
+/* Title bar */
+#title-bar {
     display: flex;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    background: #000080; /* classic Win95 blue */
+    color: white;
+    padding: 3px 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    user-select: none;
 }
 
-.window-buttons .btn {
+/* Window control container */
+.win-controls {
+    display: flex;
+    gap: 6px;
+    padding-left: 4px;
+}
+
+/* Stoplight buttons (Mac-style) */
+.win-btn {
     width: 12px;
     height: 12px;
+    padding: 0;
     border-radius: 50%;
-    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25);
+    font-size: 0; /* hide text symbols */
 }
 
-.window-buttons .close { background: #ff5f56; }
-.window-buttons .minimize { background: #ffbd2e; }
-.window-buttons .maximize { background: #27c93f; }
+/* Individual colors */
+.win-btn.close {
+    background: #ff5f57;
+}
+
+.win-btn.minimize {
+    background: #ffbd2e;
+}
+
+.win-btn.maximize {
+    background: #28c840;
+}
+
+/* Optional subtle hover (feels very macOS) */
+.win-btn:hover {
+    filter: brightness(0.95);
+}
+
+.win-btn:active {
+    filter: brightness(0.85);
+}
+
+#letter-window.maxed {
+    width: 90%;
+}
+
 
 /* Editable letter area */
 #letter {
@@ -121,6 +169,7 @@ p, .star-list {
     background: #fff;
     color: #000;
     font-size: 1rem;
+    letter-spacing: -0.5px;
     outline: none; /* remove focus border */
     white-space: pre-wrap; /* preserve line breaks */
 }
